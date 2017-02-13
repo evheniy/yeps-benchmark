@@ -2,8 +2,9 @@ node --version
 v7.4.0
 
 http://localhost:3000/
+Master 13746 is running
   10 middleware
-Server started on port 3000
+  10 middleware
 This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
@@ -19,30 +20,30 @@ Document Path:          /
 Document Length:        11 bytes
 
 Concurrency Level:      100
-Time taken for tests:   53.948 seconds
+Time taken for tests:   52.879 seconds
 Complete requests:      50000
 Failed requests:        0
 Total transferred:      5600000 bytes
 HTML transferred:       550000 bytes
-Requests per second:    926.82 [#/sec] (mean)
-Time per request:       107.896 [ms] (mean)
-Time per request:       1.079 [ms] (mean, across all concurrent requests)
-Transfer rate:          101.37 [Kbytes/sec] received
+Requests per second:    945.55 [#/sec] (mean)
+Time per request:       105.759 [ms] (mean)
+Time per request:       1.058 [ms] (mean, across all concurrent requests)
+Transfer rate:          103.42 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    1   0.8      1      14
-Processing:   100  107   5.1    106     152
-Waiting:       99  105   4.1    104     147
-Total:        100  108   5.0    107     152
+Connect:        0    0   1.8      0     131
+Processing:    99  105  12.7    103     365
+Waiting:       99  105  12.4    103     365
+Total:        100  106  13.3    103     365
 
 Percentage of the requests served within a certain time (ms)
-  50%    107
-  66%    108
-  75%    109
-  80%    110
-  90%    113
-  95%    117
-  98%    122
-  99%    128
- 100%    152 (longest request)
+  50%    103
+  66%    104
+  75%    105
+  80%    106
+  90%    108
+  95%    112
+  98%    131
+  99%    160
+ 100%    365 (longest request)

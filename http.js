@@ -1,17 +1,30 @@
+const cluster = require('cluster');
+const numCPUs = require('os').cpus().length;
 const http = require('http');
 const pause = require('promise-pause-timeout');
 
-// number of middleware
+if (cluster.isMaster) {
+    console.log(`Master ${process.pid} is running`);
 
-let n = parseInt(process.env.MW || '1', 10);
-console.log('  %s middleware', n);
+    // Fork workers.
+    for (let i = 0; i < numCPUs; i++) {
+        cluster.fork();
+    }
 
-const server = http.createServer(async (req, res) => {
-    await pause(10 * n);
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('Hello World');
-});
+    cluster.on('exit', (worker) => {
+        console.log(`worker ${worker.process.pid} died`);
+    });
+} else {
+    // number of middleware
 
-server.listen(parseInt(process.env.PORT || '3000', 10), () => {
-    console.log(`Server started on port ${server.address().port}`);
-});
+    let n = parseInt(process.env.MW || '1', 10);
+    console.log('  %s middleware', n);
+
+    const server = http.createServer(async (req, res) => {
+        await pause(10 * n);
+        res.writeHead(200, {'Content-Type': 'text/plain'});
+        res.end('Hello World');
+    });
+
+    server.listen(parseInt(process.env.PORT || '3000', 10));
+}
