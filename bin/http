@@ -4,7 +4,7 @@ echo "node --version"
 node --version
 
 echo
-MW=$1 PORT=$2 node --harmony express.js &
+MW=$1 PORT=$2 node --harmony http.js &
 pid=$!
 
 echo "http://localhost:$2/"

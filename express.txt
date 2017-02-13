@@ -1,6 +1,8 @@
+node --version
+v7.4.0
 
 http://localhost:3000/
-  30 middleware
+  10 middleware
 Server started on port 3000
 This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
@@ -16,31 +18,31 @@ Server Port:            3000
 Document Path:          /
 Document Length:        11 bytes
 
-Concurrency Level:      1000
-Time taken for tests:   7.132 seconds
-Complete requests:      10000
+Concurrency Level:      100
+Time taken for tests:   62.303 seconds
+Complete requests:      50000
 Failed requests:        0
-Total transferred:      1350000 bytes
-HTML transferred:       110000 bytes
-Requests per second:    1402.06 [#/sec] (mean)
-Time per request:       713.235 [ms] (mean)
-Time per request:       0.713 [ms] (mean, across all concurrent requests)
-Transfer rate:          184.84 [Kbytes/sec] received
+Total transferred:      6750000 bytes
+HTML transferred:       550000 bytes
+Requests per second:    802.52 [#/sec] (mean)
+Time per request:       124.607 [ms] (mean)
+Time per request:       1.246 [ms] (mean, across all concurrent requests)
+Transfer rate:          105.80 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0  230 657.6      1    3009
-Processing:   354  431  62.7    403     915
-Waiting:      354  426  61.4    397     915
-Total:        354  661 671.5    420    3498
+Connect:        0    0   1.1      0      33
+Processing:   103  124  23.0    116     307
+Waiting:      103  121  21.6    114     283
+Total:        103  124  23.0    116     307
 
 Percentage of the requests served within a certain time (ms)
-  50%    420
-  66%    465
-  75%    491
-  80%    526
-  90%   1395
-  95%   1596
-  98%   3495
-  99%   3497
- 100%   3498 (longest request)
+  50%    116
+  66%    121
+  75%    125
+  80%    129
+  90%    151
+  95%    174
+  98%    205
+  99%    229
+ 100%    307 (longest request)
