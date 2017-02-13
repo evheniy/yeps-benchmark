@@ -1,0 +1,50 @@
+{
+  "name": "yeps-benchmark",
+  "version": "0.0.1",
+  "description": "Benchmark for yeps",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint index.js koa.js",
+    "test": "./node_modules/.bin/npm-run-all test:*",
+    "test:yeps": "sh bin/run 10 3000 > yeps.txt",
+    "test:koa": "sh bin/run_koa 10 3000 > koa2.txt",
+    "precommit": "npm run lint",
+    "prepush": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evheniy/yeps-benchmark.git"
+  },
+  "keywords": [
+    "yeps",
+    "promise",
+    "http",
+    "server",
+    "rest",
+    "fast",
+    "async",
+    "await",
+    "https",
+    "ssl",
+    "easy"
+  ],
+  "author": "Evheniy Bystrov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evheniy/yeps-benchmark/issues"
+  },
+  "homepage": "https://github.com/evheniy/yeps-benchmark#readme",
+  "dependencies": {
+    "koa": "^2.0.0-alpha.8",
+    "nodeload": "^0.4.0",
+    "yeps": "0.0.7"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "eslint-config-eslint": "^3.0.0",
+    "husky": "^0.13.1",
+    "npm-run-all": "^4.0.1",
+    "nsp": "^2.6.2",
+    "rimraf": "^2.5.4"
+  }
+}
