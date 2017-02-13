@@ -1,4 +1,5 @@
 const http = require('http');
+const pause = require('promise-pause-timeout');
 const App = require('yeps');
 const app = new App();
 
@@ -8,7 +9,9 @@ let n = parseInt(process.env.MW || '1', 10);
 console.log('  %s middleware', n);
 
 while (n--) {
-    app.then(async () => {});
+    app.then(async () => {
+        await pause(10);
+    });
 }
 
 app.then(async ctx => {

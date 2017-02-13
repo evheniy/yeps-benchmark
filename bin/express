@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo
+MW=$1 PORT=$2 node --harmony express.js &
+pid=$!
+
+echo "http://localhost:$2/"
+
+sleep 2
+
+ab -c 1000 -n 10000 http://localhost:$2/
+
+kill $pid

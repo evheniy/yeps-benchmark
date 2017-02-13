@@ -1,7 +1,7 @@
 const http = require('http');
 const pause = require('promise-pause-timeout');
-const App = require('koa');
-const app = new App();
+const express = require('express');
+const app = express();
 
 // number of middleware
 
@@ -9,18 +9,18 @@ let n = parseInt(process.env.MW || '1', 10);
 console.log('  %s middleware', n);
 
 while (n--) {
-    app.use(async (ctx, next) => {
+    app.use(async (req, res, next) => {
         await pause(10);
-        await next();
+        next();
     });
 }
 
-app.use(async (ctx, next) => {
-    await next();
-    ctx.body = 'Hello World';
+app.use(async (req, res) => {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('Hello World');
 });
 
-const server = http.createServer(app.callback());
+const server = http.createServer(app);
 
 server.listen(parseInt(process.env.PORT || '3000', 10), () => {
     console.log(`Server started on port ${server.address().port}`);

@@ -4,10 +4,11 @@
   "description": "Benchmark for yeps",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint index.js koa.js",
+    "lint": "./node_modules/.bin/eslint index.js koa.js express.js",
     "test": "./node_modules/.bin/npm-run-all test:*",
-    "test:yeps": "sh bin/run 10 3000 > yeps.txt",
-    "test:koa": "sh bin/run_koa 10 3000 > koa2.txt",
+    "test:express": "sh bin/express 30 3000 > express.txt",
+    "test:koa": "sh bin/koa 30 3000 > koa2.txt",
+    "test:yeps": "sh bin/yeps 30 3000 > yeps.txt",
     "precommit": "npm run lint",
     "prepush": "npm run lint"
   },
@@ -35,9 +36,11 @@
   },
   "homepage": "https://github.com/evheniy/yeps-benchmark#readme",
   "dependencies": {
+    "express": "^4.14.1",
     "koa": "^2.0.0-alpha.8",
     "nodeload": "^0.4.0",
-    "yeps": "0.0.7"
+    "promise-pause-timeout": "0.0.1",
+    "yeps": "^0.0.8"
   },
   "devDependencies": {
     "eslint": "^3.15.0",
