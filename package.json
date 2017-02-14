@@ -6,10 +6,10 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint yeps.js koa.js express.js http.js",
     "test": "./node_modules/.bin/npm-run-all test:*",
-    "test:http": "sh bin/http 10 3000 > http.txt",
-    "test:express": "sh bin/express 10 3000 > express.txt",
-    "test:koa": "sh bin/koa 10 3000 > koa2.txt",
-    "test:yeps": "sh bin/yeps 10 3000 > yeps.txt",
+    "test:http": "sh bin/test http 10 3000 > http.txt",
+    "test:express": "sh bin/test express 10 3000 > express.txt",
+    "test:koa": "sh bin/test koa 10 3000 > koa2.txt",
+    "test:yeps": "sh bin/test yeps 10 3000 > yeps.txt",
     "precommit": "npm run lint",
     "prepush": "npm run lint"
   },
