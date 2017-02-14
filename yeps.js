@@ -22,11 +22,14 @@ if (cluster.isMaster) {
     let n = parseInt(process.env.MW || '1', 10);
     console.log('  %s middleware', n);
 
+    const fns = [];
     while (n--) {
-        app.then(async () => {
+        fns.push(async () => {
             await pause(10);
         });
     }
+
+    app.all(fns);
 
     app.then(async ctx => {
         ctx.res.writeHead(200, {'Content-Type': 'text/plain'});
