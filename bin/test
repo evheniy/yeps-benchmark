@@ -8,10 +8,10 @@ echo "MW=$2 PORT=$3 node --harmony $1.js"
 MW=$2 PORT=$3 node --harmony $1.js &
 pid=$!
 
-echo "http://localhost:$3/"
+echo "ab -c $4 -n $5 http://localhost:$3/"
 
 sleep 2
 
-ab -c 100 -n 50000 http://localhost:$3/
+ab -c $4 -n $5 http://localhost:$3/
 
 kill $pid
