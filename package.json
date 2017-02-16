@@ -47,7 +47,7 @@
     "koa": "^2.0.0-alpha.8",
     "nodeload": "^0.4.0",
     "promise-pause-timeout": "0.0.1",
-    "yeps": "^0.0.9"
+    "yeps": "^0.0.10"
   },
   "devDependencies": {
     "eslint": "^3.15.0",
