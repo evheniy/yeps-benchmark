@@ -1,6 +1,6 @@
 {
   "name": "yeps-benchmark",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Benchmark for yeps",
   "main": "index.js",
   "config": {
@@ -10,12 +10,18 @@
     "requests": "50000"
   },
   "scripts": {
-    "lint": "./node_modules/.bin/eslint *.js",
-    "test": "./node_modules/.bin/npm-run-all test:*",
-    "test:http": "sh bin/test http $npm_package_config_count $npm_package_config_port $npm_package_config_concurrency $npm_package_config_requests > http.txt",
-    "test:express": "sh bin/test express $npm_package_config_count $npm_package_config_port $npm_package_config_concurrency $npm_package_config_requests > express.txt",
-    "test:koa": "sh bin/test koa2 $npm_package_config_count $npm_package_config_port $npm_package_config_concurrency $npm_package_config_requests > koa2.txt",
-    "test:yeps": "sh bin/test yeps $npm_package_config_count $npm_package_config_port $npm_package_config_concurrency $npm_package_config_requests > yeps.txt",
+    "lint": "./node_modules/.bin/eslint **/*.js",
+    "test": "./node_modules/.bin/npm-run-all test:**",
+    "test:http:middleware": "sh bin/middleware http $npm_package_config_count $npm_package_config_port $npm_package_config_concurrency $npm_package_config_requests > reports/http_middleware.txt",
+    "test:express:middleware": "sh bin/middleware express $npm_package_config_count $npm_package_config_port $npm_package_config_concurrency $npm_package_config_requests > reports/express_middleware.txt",
+    "test:express:router_first": "sh bin/middleware express 1 $npm_package_config_port $npm_package_config_concurrency $npm_package_config_requests > reports/express_route_first.txt",
+    "test:express:router_last": "sh bin/middleware express 10 $npm_package_config_port $npm_package_config_concurrency $npm_package_config_requests > reports/express_route_last.txt",
+    "test:koa2:middleware": "sh bin/middleware koa2 $npm_package_config_count $npm_package_config_port $npm_package_config_concurrency $npm_package_config_requests > reports/koa2_middleware.txt",
+    "test:koa2:router_first": "sh bin/middleware koa2 1 $npm_package_config_port $npm_package_config_concurrency $npm_package_config_requests > reports/koa2_route_first.txt",
+    "test:koa2:router_last": "sh bin/middleware koa2 10 $npm_package_config_port $npm_package_config_concurrency $npm_package_config_requests > reports/koa2_route_last.txt",
+    "test:yeps:middleware": "sh bin/middleware yeps $npm_package_config_count $npm_package_config_port $npm_package_config_concurrency $npm_package_config_requests > reports/yeps_middleware.txt",
+    "test:yeps:router_first": "sh bin/middleware yeps 1 $npm_package_config_port $npm_package_config_concurrency $npm_package_config_requests > reports/yeps_route_first.txt",
+    "test:yeps:router_last": "sh bin/middleware yeps 10 $npm_package_config_port $npm_package_config_concurrency $npm_package_config_requests > reports/yeps_route_last.txt",
     "precommit": "npm run lint",
     "prepush": "npm run lint"
   },
@@ -45,9 +51,11 @@
   "dependencies": {
     "express": "^4.14.1",
     "koa": "^2.0.0-alpha.8",
+    "koa-router": "^7.0.1",
     "nodeload": "^0.4.0",
     "promise-pause-timeout": "0.0.1",
-    "yeps": "^0.0.14"
+    "yeps": "^0.0.14",
+    "yeps-router": "0.0.2"
   },
   "devDependencies": {
     "eslint": "^3.15.0",

@@ -3,9 +3,9 @@
 echo "node --version"
 node --version
 
-echo "MW=$2 PORT=$3 node --harmony $1.js"
+echo "MW=$2 PORT=$3 node --harmony $1/index.js"
 
-MW=$2 PORT=$3 node --harmony $1.js &
+MW=$2 PORT=$3 node --harmony $1/index.js &
 pid=$!
 
 echo "ab -c $4 -n $5 http://localhost:$3/"

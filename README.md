@@ -1,4 +1,4 @@
-# Benchmark for yeps
+# Benchmark for yeps and yeps-router
 
 For testing you need to install **ab** and run:
 
@@ -6,12 +6,6 @@ For testing you need to install **ab** and run:
 
 ## Results:
 
-ab -c 100 -n 50000 for 10 middlewares each library:
+ab -c 100 -n 50000 for each library:
 
-[yeps](https://raw.githubusercontent.com/evheniy/yeps-benchmark/master/yeps.txt)
-and
-[koa2](https://raw.githubusercontent.com/evheniy/yeps-benchmark/master/koa2.txt)
-and
-[express](https://raw.githubusercontent.com/evheniy/yeps-benchmark/master/express.txt)
-and
-[http](https://raw.githubusercontent.com/evheniy/yeps-benchmark/master/http.txt)
+[RESULTS](https://raw.githubusercontent.com/evheniy/yeps-benchmark/master/reports)

@@ -1,10 +1,10 @@
 node --version
 v7.4.0
-MW=10 PORT=3000 node --harmony yeps.js
+MW=1 PORT=3000 node --harmony express/index.js
 ab -c 100 -n 50000 http://localhost:3000/
-Master 16318 is running
-  10 middleware
-  10 middleware
+Master 3002 is running
+  1 middleware
+  1 middleware
 This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
@@ -20,30 +20,30 @@ Document Path:          /
 Document Length:        11 bytes
 
 Concurrency Level:      100
-Time taken for tests:   16.055 seconds
+Time taken for tests:   16.333 seconds
 Complete requests:      50000
 Failed requests:        0
-Total transferred:      5600000 bytes
+Total transferred:      6750000 bytes
 HTML transferred:       550000 bytes
-Requests per second:    3114.37 [#/sec] (mean)
-Time per request:       32.109 [ms] (mean)
-Time per request:       0.321 [ms] (mean, across all concurrent requests)
-Transfer rate:          340.63 [Kbytes/sec] received
+Requests per second:    3061.29 [#/sec] (mean)
+Time per request:       32.666 [ms] (mean)
+Time per request:       0.327 [ms] (mean, across all concurrent requests)
+Transfer rate:          403.59 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.2      0       8
-Processing:    18   32   6.0     31     132
-Waiting:       16   32   5.9     31     131
-Total:         23   32   6.0     31     132
+Connect:        0    0   0.3      0      11
+Processing:    20   33   5.9     31     107
+Waiting:       15   32   5.9     31     107
+Total:         22   33   5.9     31     107
 
 Percentage of the requests served within a certain time (ms)
   50%     31
-  66%     32
-  75%     33
-  80%     34
-  90%     36
-  95%     39
-  98%     45
-  99%     51
- 100%    132 (longest request)
+  66%     33
+  75%     34
+  80%     35
+  90%     39
+  95%     43
+  98%     48
+  99%     52
+ 100%    107 (longest request)

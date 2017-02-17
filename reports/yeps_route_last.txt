@@ -1,0 +1,49 @@
+node --version
+v7.4.0
+MW=10 PORT=3000 node --harmony yeps/index.js
+ab -c 100 -n 50000 http://localhost:3000/
+Master 3560 is running
+  10 middleware
+  10 middleware
+This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+
+
+Server Software:        
+Server Hostname:        localhost
+Server Port:            3000
+
+Document Path:          /
+Document Length:        11 bytes
+
+Concurrency Level:      100
+Time taken for tests:   16.149 seconds
+Complete requests:      50000
+Failed requests:        0
+Total transferred:      5600000 bytes
+HTML transferred:       550000 bytes
+Requests per second:    3096.13 [#/sec] (mean)
+Time per request:       32.298 [ms] (mean)
+Time per request:       0.323 [ms] (mean, across all concurrent requests)
+Transfer rate:          338.64 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.4      0      13
+Processing:    16   32   6.1     31     109
+Waiting:       14   32   6.0     31     109
+Total:         16   32   6.2     31     117
+
+Percentage of the requests served within a certain time (ms)
+  50%     31
+  66%     33
+  75%     34
+  80%     34
+  90%     37
+  95%     42
+  98%     50
+  99%     55
+ 100%    117 (longest request)
