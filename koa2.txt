@@ -2,7 +2,7 @@ node --version
 v7.4.0
 MW=10 PORT=3000 node --harmony koa2.js
 ab -c 100 -n 50000 http://localhost:3000/
-Master 7257 is running
+Master 16283 is running
   10 middleware
   10 middleware
 This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
@@ -20,30 +20,30 @@ Document Path:          /
 Document Length:        11 bytes
 
 Concurrency Level:      100
-Time taken for tests:   54.385 seconds
+Time taken for tests:   54.954 seconds
 Complete requests:      50000
 Failed requests:        0
 Total transferred:      7350000 bytes
 HTML transferred:       550000 bytes
-Requests per second:    919.37 [#/sec] (mean)
-Time per request:       108.770 [ms] (mean)
-Time per request:       1.088 [ms] (mean, across all concurrent requests)
-Transfer rate:          131.98 [Kbytes/sec] received
+Requests per second:    909.85 [#/sec] (mean)
+Time per request:       109.908 [ms] (mean)
+Time per request:       1.099 [ms] (mean, across all concurrent requests)
+Transfer rate:          130.61 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.3      0      18
-Processing:   100  109   4.8    108     186
-Waiting:      100  108   4.6    107     186
-Total:        100  109   4.9    108     188
+Connect:        0    0   0.2      0       6
+Processing:   100  110   4.7    109     182
+Waiting:      100  109   4.5    108     181
+Total:        100  110   4.7    109     183
 
 Percentage of the requests served within a certain time (ms)
-  50%    108
-  66%    109
-  75%    110
-  80%    111
-  90%    113
-  95%    115
-  98%    119
-  99%    125
- 100%    188 (longest request)
+  50%    109
+  66%    111
+  75%    112
+  80%    113
+  90%    115
+  95%    117
+  98%    120
+  99%    124
+ 100%    183 (longest request)

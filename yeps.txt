@@ -2,7 +2,7 @@ node --version
 v7.4.0
 MW=10 PORT=3000 node --harmony yeps.js
 ab -c 100 -n 50000 http://localhost:3000/
-Master 7291 is running
+Master 16318 is running
   10 middleware
   10 middleware
 This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
@@ -20,30 +20,30 @@ Document Path:          /
 Document Length:        11 bytes
 
 Concurrency Level:      100
-Time taken for tests:   17.001 seconds
+Time taken for tests:   16.055 seconds
 Complete requests:      50000
 Failed requests:        0
 Total transferred:      5600000 bytes
 HTML transferred:       550000 bytes
-Requests per second:    2940.93 [#/sec] (mean)
-Time per request:       34.003 [ms] (mean)
-Time per request:       0.340 [ms] (mean, across all concurrent requests)
-Transfer rate:          321.66 [Kbytes/sec] received
+Requests per second:    3114.37 [#/sec] (mean)
+Time per request:       32.109 [ms] (mean)
+Time per request:       0.321 [ms] (mean, across all concurrent requests)
+Transfer rate:          340.63 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.2      0       5
-Processing:    21   34   6.0     33     122
-Waiting:       19   34   5.9     33     122
-Total:         21   34   6.0     33     124
+Connect:        0    0   0.2      0       8
+Processing:    18   32   6.0     31     132
+Waiting:       16   32   5.9     31     131
+Total:         23   32   6.0     31     132
 
 Percentage of the requests served within a certain time (ms)
-  50%     33
-  66%     34
-  75%     35
-  80%     36
-  90%     38
-  95%     41
-  98%     50
-  99%     63
- 100%    124 (longest request)
+  50%     31
+  66%     32
+  75%     33
+  80%     34
+  90%     36
+  95%     39
+  98%     45
+  99%     51
+ 100%    132 (longest request)
