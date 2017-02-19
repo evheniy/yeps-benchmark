@@ -2,8 +2,7 @@ node --version
 v7.4.0
 MW=10 PORT=3000 node --harmony express/index.js
 ab -c 100 -n 50000 http://localhost:3000/
-Master 2968 is running
-  10 middleware
+Master 7407 is running
   10 middleware
 This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
@@ -20,30 +19,30 @@ Document Path:          /
 Document Length:        11 bytes
 
 Concurrency Level:      100
-Time taken for tests:   54.178 seconds
+Time taken for tests:   56.392 seconds
 Complete requests:      50000
 Failed requests:        0
 Total transferred:      6750000 bytes
 HTML transferred:       550000 bytes
-Requests per second:    922.88 [#/sec] (mean)
-Time per request:       108.357 [ms] (mean)
-Time per request:       1.084 [ms] (mean, across all concurrent requests)
-Transfer rate:          121.67 [Kbytes/sec] received
+Requests per second:    886.65 [#/sec] (mean)
+Time per request:       112.784 [ms] (mean)
+Time per request:       1.128 [ms] (mean, across all concurrent requests)
+Transfer rate:          116.89 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.2      0       7
-Processing:   100  108   3.5    108     201
-Waiting:      100  107   3.4    107     201
-Total:        100  108   3.6    108     203
+Connect:        0    0   0.7      0      36
+Processing:   101  112   7.5    111     218
+Waiting:      100  112   7.2    110     217
+Total:        101  113   7.6    111     220
 
 Percentage of the requests served within a certain time (ms)
-  50%    108
-  66%    109
-  75%    110
-  80%    110
-  90%    111
-  95%    113
-  98%    114
-  99%    116
- 100%    203 (longest request)
+  50%    111
+  66%    114
+  75%    115
+  80%    117
+  90%    121
+  95%    124
+  98%    131
+  99%    139
+ 100%    220 (longest request)
