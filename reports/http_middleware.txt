@@ -1,11 +1,11 @@
 node --version
-v7.4.0
-MW=10 PORT=3000 node --harmony http/index.js
+v7.7.2
+MW=10 PORT=3000 node http/index.js
 ab -c 100 -n 50000 http://localhost:3000/
-Master 7369 is running
+Master 10957 is running
   10 middleware
   10 middleware
-This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
@@ -20,30 +20,30 @@ Document Path:          /
 Document Length:        11 bytes
 
 Concurrency Level:      100
-Time taken for tests:   54.423 seconds
+Time taken for tests:   51.296 seconds
 Complete requests:      50000
 Failed requests:        0
 Total transferred:      5600000 bytes
 HTML transferred:       550000 bytes
-Requests per second:    918.73 [#/sec] (mean)
-Time per request:       108.846 [ms] (mean)
-Time per request:       1.088 [ms] (mean, across all concurrent requests)
-Transfer rate:          100.49 [Kbytes/sec] received
+Requests per second:    974.73 [#/sec] (mean)
+Time per request:       102.593 [ms] (mean)
+Time per request:       1.026 [ms] (mean, across all concurrent requests)
+Transfer rate:          106.61 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   1.9      0      73
-Processing:   100  108  14.0    104     260
-Waiting:       99  108  13.3    103     246
-Total:        100  109  14.5    104     260
+Connect:        0    0   0.2      0       6
+Processing:    99  102   3.0    102     186
+Waiting:       99  102   2.9    102     186
+Total:         99  102   3.0    102     187
 
 Percentage of the requests served within a certain time (ms)
-  50%    104
-  66%    106
-  75%    108
-  80%    110
-  90%    120
-  95%    135
-  98%    159
-  99%    177
- 100%    260 (longest request)
+  50%    102
+  66%    103
+  75%    103
+  80%    103
+  90%    104
+  95%    105
+  98%    107
+  99%    109
+ 100%    187 (longest request)

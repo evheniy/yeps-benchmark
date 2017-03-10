@@ -3,9 +3,9 @@
 echo "node --version"
 node --version
 
-echo "R=$2 PORT=$3 node --harmony $1/router.js"
+echo "R=$2 PORT=$3 node $1/router.js"
 
-R=$2 PORT=$3 node --harmony $1/router.js &
+R=$2 PORT=$3 node $1/router.js &
 pid=$!
 
 echo "ab -c $4 -n $5 http://localhost:$3/$2"

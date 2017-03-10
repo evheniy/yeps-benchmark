@@ -1,11 +1,11 @@
 node --version
-v7.4.0
-MW=10 PORT=3000 node --harmony koa2/index.js
+v7.7.2
+MW=10 PORT=3000 node koa2/index.js
 ab -c 100 -n 50000 http://localhost:3000/
-Master 7510 is running
+Master 11089 is running
   10 middleware
   10 middleware
-This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
@@ -20,30 +20,30 @@ Document Path:          /
 Document Length:        11 bytes
 
 Concurrency Level:      100
-Time taken for tests:   54.996 seconds
+Time taken for tests:   53.277 seconds
 Complete requests:      50000
 Failed requests:        0
 Total transferred:      7350000 bytes
 HTML transferred:       550000 bytes
-Requests per second:    909.16 [#/sec] (mean)
-Time per request:       109.992 [ms] (mean)
-Time per request:       1.100 [ms] (mean, across all concurrent requests)
-Transfer rate:          130.51 [Kbytes/sec] received
+Requests per second:    938.49 [#/sec] (mean)
+Time per request:       106.554 [ms] (mean)
+Time per request:       1.066 [ms] (mean, across all concurrent requests)
+Transfer rate:          134.72 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
 Connect:        0    0   0.2      0       6
-Processing:   100  110   6.1    109     191
-Waiting:      100  109   5.9    108     191
-Total:        100  110   6.2    109     197
+Processing:   100  106   3.7    106     190
+Waiting:      100  106   3.6    105     190
+Total:        100  106   3.8    106     191
 
 Percentage of the requests served within a certain time (ms)
-  50%    109
-  66%    111
-  75%    112
-  80%    113
-  90%    115
-  95%    118
-  98%    123
-  99%    133
- 100%    197 (longest request)
+  50%    106
+  66%    107
+  75%    108
+  80%    108
+  90%    110
+  95%    111
+  98%    113
+  99%    116
+ 100%    191 (longest request)

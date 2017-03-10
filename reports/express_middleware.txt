@@ -1,10 +1,11 @@
 node --version
-v7.4.0
-MW=10 PORT=3000 node --harmony express/index.js
+v7.7.2
+MW=10 PORT=3000 node express/index.js
 ab -c 100 -n 50000 http://localhost:3000/
-Master 7407 is running
+Master 10990 is running
   10 middleware
-This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
+  10 middleware
+This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
@@ -19,30 +20,30 @@ Document Path:          /
 Document Length:        11 bytes
 
 Concurrency Level:      100
-Time taken for tests:   56.392 seconds
+Time taken for tests:   53.857 seconds
 Complete requests:      50000
 Failed requests:        0
 Total transferred:      6750000 bytes
 HTML transferred:       550000 bytes
-Requests per second:    886.65 [#/sec] (mean)
-Time per request:       112.784 [ms] (mean)
-Time per request:       1.128 [ms] (mean, across all concurrent requests)
-Transfer rate:          116.89 [Kbytes/sec] received
+Requests per second:    928.38 [#/sec] (mean)
+Time per request:       107.714 [ms] (mean)
+Time per request:       1.077 [ms] (mean, across all concurrent requests)
+Transfer rate:          122.39 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.7      0      36
-Processing:   101  112   7.5    111     218
-Waiting:      100  112   7.2    110     217
-Total:        101  113   7.6    111     220
+Connect:        0    0   0.1      0       5
+Processing:   100  108   4.5    107     220
+Waiting:      100  107   4.4    107     218
+Total:        100  108   4.5    107     221
 
 Percentage of the requests served within a certain time (ms)
-  50%    111
-  66%    114
-  75%    115
-  80%    117
-  90%    121
-  95%    124
-  98%    131
-  99%    139
- 100%    220 (longest request)
+  50%    107
+  66%    108
+  75%    109
+  80%    109
+  90%    111
+  95%    112
+  98%    114
+  99%    117
+ 100%    221 (longest request)
