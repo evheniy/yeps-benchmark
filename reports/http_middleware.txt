@@ -2,7 +2,7 @@ node --version
 v7.7.2
 MW=10 PORT=3000 node http/index.js
 ab -c 100 -n 50000 http://localhost:3000/
-Master 10957 is running
+Master 7215 is running
   10 middleware
   10 middleware
 This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
@@ -20,30 +20,30 @@ Document Path:          /
 Document Length:        11 bytes
 
 Concurrency Level:      100
-Time taken for tests:   51.296 seconds
+Time taken for tests:   51.147 seconds
 Complete requests:      50000
 Failed requests:        0
 Total transferred:      5600000 bytes
 HTML transferred:       550000 bytes
-Requests per second:    974.73 [#/sec] (mean)
-Time per request:       102.593 [ms] (mean)
-Time per request:       1.026 [ms] (mean, across all concurrent requests)
-Transfer rate:          106.61 [Kbytes/sec] received
+Requests per second:    977.58 [#/sec] (mean)
+Time per request:       102.294 [ms] (mean)
+Time per request:       1.023 [ms] (mean, across all concurrent requests)
+Transfer rate:          106.92 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.2      0       6
-Processing:    99  102   3.0    102     186
-Waiting:       99  102   2.9    102     186
-Total:         99  102   3.0    102     187
+Connect:        0    0   0.1      0       7
+Processing:    99  102   2.2    102     159
+Waiting:       99  102   2.1    102     155
+Total:         99  102   2.2    102     159
 
 Percentage of the requests served within a certain time (ms)
   50%    102
-  66%    103
+  66%    102
   75%    103
   80%    103
   90%    104
-  95%    105
-  98%    107
-  99%    109
- 100%    187 (longest request)
+  95%    104
+  98%    106
+  99%    107
+ 100%    159 (longest request)
