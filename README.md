@@ -36,13 +36,4 @@ For testing you need **ab**
 * [yeps](https://raw.githubusercontent.com/evheniy/yeps-benchmark/master/reports/yeps_route_last.txt)
 
 
-## Links 
-
-* [yeps](https://github.com/evheniy/yeps) - YEPS
-* [yeps-promisify](https://github.com/evheniy/yeps-promisify) - YEPS kernel
-* [yeps-router](https://github.com/evheniy/yeps-router) - YEPS promise based router
-* [yeps-error](https://github.com/evheniy/yeps-error) - YEPS 404/500 error handler
-* [yeps-redis](https://github.com/evheniy/yeps-redis) - YEPS promise based redis client
-* [yeps-logger](https://github.com/evheniy/yeps-logger) - YEPS Async logger - winston
-* [yeps-boilerplate](https://github.com/evheniy/yeps-boilerplate) - YEPS app boilerplate
-* [yeps-express-wrapper](https://github.com/evheniy/yeps-express-wrapper) - YEPS express wrapper
+#### [YEPS documentation](http://yeps.info/)
