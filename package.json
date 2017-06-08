@@ -52,9 +52,9 @@
     "node": ">=7.6.0"
   },
   "dependencies": {
-    "express": "^4.14.1",
-    "koa": "^2.1.0",
-    "koa-router": "^7.1.0",
+    "express": "^4.15.3",
+    "koa": "^2.2.0",
+    "koa-router": "^7.2.0",
     "nodeload": "^0.4.0",
     "yeps": "^1.0.0",
     "yeps-router": "^1.0.0"
