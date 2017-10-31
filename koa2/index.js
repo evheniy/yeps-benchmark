@@ -3,39 +3,39 @@ const numCPUs = require('os').cpus().length;
 const http = require('http');
 const pause = require('promise-pause-timeout');
 const App = require('koa');
-const app = new App();
-
 
 if (cluster.isMaster) {
-    console.log(`Master ${process.pid} is running`);
+  console.log(`Master ${process.pid} is running`);
 
-    // Fork workers.
-    for (let i = 0; i < numCPUs; i++) {
-        cluster.fork();
-    }
+  // Fork workers.
+  for (let i = 0; i < numCPUs; i++) {
+    cluster.fork();
+  }
 
-    cluster.on('exit', (worker) => {
-        console.log(`worker ${worker.process.pid} died`);
-    });
+  cluster.on('exit', (worker) => {
+    console.log(`worker ${worker.process.pid} died`);
+  });
 } else {
-    // number of middleware
+  // number of middleware
 
-    let n = parseInt(process.env.MW || '1', 10);
-    console.log('  %s middleware', n);
+  const app = new App();
 
-    while (n--) {
-        app.use(async (ctx, next) => {
-            await pause(10);
-            await next();
-        });
-    }
+  let n = parseInt(process.env.MW || '1', 10);
+  console.log('  %s middleware', n);
 
+  while (n--) {
     app.use(async (ctx, next) => {
-        await next();
-        ctx.body = 'Hello World';
+      await pause(10);
+      await next();
     });
+  }
 
-    const server = http.createServer(app.callback());
+  app.use(async (ctx, next) => {
+    await next();
+    ctx.body = 'Hello World';
+  });
 
-    server.listen(parseInt(process.env.PORT || '3000', 10));
+  const server = http.createServer(app.callback());
+
+  server.listen(parseInt(process.env.PORT || '3000', 10));
 }

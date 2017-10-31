@@ -12,6 +12,6 @@ echo "ab -c $4 -n $5 http://localhost:$3/"
 
 sleep 2
 
-ab -c $4 -n $5 http://localhost:$3/
+ab -c $4 -n $5 -s 1000000 http://localhost:$3/
 
 kill $pid
