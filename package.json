@@ -7,7 +7,7 @@
     "port": "3000",
     "count": "10",
     "concurrency": "100",
-    "requests": "50000"
+    "requests": "10000"
   },
   "scripts": {
     "test": "npm-run-all test:**",
@@ -58,7 +58,7 @@
     "nodeload": "^0.4.0",
     "promise-pause-timeout": "^1.0.0",
     "yeps": "^1.0.1",
-    "yeps-router": "^1.1.2"
+    "yeps-router": "^1.2.0"
   },
   "devDependencies": {
     "eslint": "^4.10.0",

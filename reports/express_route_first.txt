@@ -1,13 +1,9 @@
 node --version
-v8.0.0
-MW=1 PORT=3000 node express/index.js
-ab -c 100 -n 50000 http://localhost:3000/
-Master 5354 is running
-  1 middleware
-  1 middleware
-  1 middleware
-  1 middleware
-This is ApacheBench, Version 2.3 <$Revision: 1706008 $>
+v8.9.0
+R=1 PORT=3000 node express/router.js
+ab -c 100 -n 10000 http://localhost:3000/1
+Master 4162 is running
+This is ApacheBench, Version 2.3 <$Revision: 1796539 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
@@ -18,34 +14,34 @@ Server Software:
 Server Hostname:        localhost
 Server Port:            3000
 
-Document Path:          /
-Document Length:        11 bytes
+Document Path:          /1
+Document Length:        1 bytes
 
 Concurrency Level:      100
-Time taken for tests:   6.816 seconds
-Complete requests:      50000
+Time taken for tests:   2.292 seconds
+Complete requests:      10000
 Failed requests:        0
-Total transferred:      6750000 bytes
-HTML transferred:       550000 bytes
-Requests per second:    7335.89 [#/sec] (mean)
-Time per request:       13.632 [ms] (mean)
-Time per request:       0.136 [ms] (mean, across all concurrent requests)
-Transfer rate:          967.13 [Kbytes/sec] received
+Total transferred:      1990000 bytes
+HTML transferred:       10000 bytes
+Requests per second:    4362.39 [#/sec] (mean)
+Time per request:       22.923 [ms] (mean)
+Time per request:       0.229 [ms] (mean, across all concurrent requests)
+Transfer rate:          847.77 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    0   0.4      0       9
-Processing:     9   13   3.6     12      61
-Waiting:        9   13   3.5     12      61
-Total:          9   14   3.7     13      63
+Connect:        0    0   2.9      0     289
+Processing:    10   17  29.2     13     348
+Waiting:       10   17  28.3     13     348
+Total:         10   18  29.3     13     348
 
 Percentage of the requests served within a certain time (ms)
   50%     13
   66%     14
-  75%     14
-  80%     15
-  90%     16
-  95%     19
-  98%     24
-  99%     30
- 100%     63 (longest request)
+  75%     16
+  80%     17
+  90%     20
+  95%     27
+  98%     39
+  99%     82
+ 100%    348 (longest request)
