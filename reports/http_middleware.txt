@@ -2,7 +2,7 @@ node --version
 v8.9.0
 MW=10 PORT=3000 node http/index.js
 ab -c 100 -n 10000 http://localhost:3000/
-Master 4755 is running
+Master 2689 is running
   10 middleware
   10 middleware
   10 middleware
@@ -26,30 +26,30 @@ Document Path:          /
 Document Length:        11 bytes
 
 Concurrency Level:      100
-Time taken for tests:   10.684 seconds
+Time taken for tests:   12.219 seconds
 Complete requests:      10000
 Failed requests:        0
 Total transferred:      1120000 bytes
 HTML transferred:       110000 bytes
-Requests per second:    936.01 [#/sec] (mean)
-Time per request:       106.836 [ms] (mean)
-Time per request:       1.068 [ms] (mean, across all concurrent requests)
-Transfer rate:          102.38 [Kbytes/sec] received
+Requests per second:    818.41 [#/sec] (mean)
+Time per request:       122.188 [ms] (mean)
+Time per request:       1.222 [ms] (mean, across all concurrent requests)
+Transfer rate:          89.51 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    2   1.1      2      10
-Processing:   100  105   2.7    104     119
-Waiting:      100  104   2.3    103     118
-Total:        100  107   3.2    106     122
+Connect:        0    5  23.9      4     584
+Processing:   100  116  49.1    109     686
+Waiting:      100  114  49.2    107     686
+Total:        101  121  54.6    113     690
 
 Percentage of the requests served within a certain time (ms)
-  50%    106
-  66%    108
-  75%    109
-  80%    110
-  90%    111
-  95%    112
-  98%    114
-  99%    116
- 100%    122 (longest request)
+  50%    113
+  66%    114
+  75%    116
+  80%    118
+  90%    125
+  95%    135
+  98%    225
+  99%    588
+ 100%    690 (longest request)

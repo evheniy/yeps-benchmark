@@ -2,7 +2,7 @@ node --version
 v8.9.0
 R=10 PORT=3000 node yeps/router.js
 ab -c 100 -n 10000 http://localhost:3000/10
-Master 4433 is running
+Master 2803 is running
 This is ApacheBench, Version 2.3 <$Revision: 1796539 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
@@ -18,30 +18,30 @@ Document Path:          /10
 Document Length:        2 bytes
 
 Concurrency Level:      100
-Time taken for tests:   1.724 seconds
+Time taken for tests:   3.541 seconds
 Complete requests:      10000
 Failed requests:        0
 Total transferred:      770000 bytes
 HTML transferred:       20000 bytes
-Requests per second:    5799.95 [#/sec] (mean)
-Time per request:       17.242 [ms] (mean)
-Time per request:       0.172 [ms] (mean, across all concurrent requests)
-Transfer rate:          436.13 [Kbytes/sec] received
+Requests per second:    2824.29 [#/sec] (mean)
+Time per request:       35.407 [ms] (mean)
+Time per request:       0.354 [ms] (mean, across all concurrent requests)
+Transfer rate:          212.37 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    1  12.2      0     274
-Processing:    10   16  24.8     13     295
-Waiting:       10   15  23.3     12     295
-Total:         10   17  27.5     13     295
+Connect:        0    8  57.7      4    1045
+Processing:    10   27  87.9     17    1055
+Waiting:       10   26  87.9     15    1055
+Total:         11   35 105.3     20    1067
 
 Percentage of the requests served within a certain time (ms)
-  50%     13
-  66%     14
-  75%     15
-  80%     16
-  90%     20
-  95%     24
-  98%     33
-  99%    276
- 100%    295 (longest request)
+  50%     20
+  66%     26
+  75%     30
+  80%     31
+  90%     33
+  95%     37
+  98%    226
+  99%   1051
+ 100%   1067 (longest request)
