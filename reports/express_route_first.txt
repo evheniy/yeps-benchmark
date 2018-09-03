@@ -1,9 +1,9 @@
 node --version
-v8.9.0
+v10.5.0
 R=1 PORT=3000 node express/router.js
 ab -c 100 -n 10000 http://localhost:3000/1
-Master 2955 is running
-This is ApacheBench, Version 2.3 <$Revision: 1796539 $>
+Master 3477 is running
+This is ApacheBench, Version 2.3 <$Revision: 1826891 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
@@ -18,30 +18,30 @@ Document Path:          /1
 Document Length:        1 bytes
 
 Concurrency Level:      100
-Time taken for tests:   3.060 seconds
+Time taken for tests:   3.944 seconds
 Complete requests:      10000
 Failed requests:        0
 Total transferred:      1990000 bytes
 HTML transferred:       10000 bytes
-Requests per second:    3267.86 [#/sec] (mean)
-Time per request:       30.601 [ms] (mean)
-Time per request:       0.306 [ms] (mean, across all concurrent requests)
-Transfer rate:          635.06 [Kbytes/sec] received
+Requests per second:    2535.41 [#/sec] (mean)
+Time per request:       39.441 [ms] (mean)
+Time per request:       0.394 [ms] (mean, across all concurrent requests)
+Transfer rate:          492.72 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    8  48.0      3     703
-Processing:    10   22  55.8     15     717
-Waiting:       10   21  54.7     14     717
-Total:         12   30  73.4     18     723
+Connect:        0   11  37.4      8     550
+Processing:    10   27  52.7     21     561
+Waiting:       10   24  52.0     18     561
+Total:         16   39  64.6     30     574
 
 Percentage of the requests served within a certain time (ms)
-  50%     18
-  66%     23
-  75%     26
-  80%     27
-  90%     32
-  95%     38
-  98%     61
-  99%    711
- 100%    723 (longest request)
+  50%     30
+  66%     32
+  75%     33
+  80%     34
+  90%     38
+  95%     42
+  98%    379
+  99%    561
+ 100%    574 (longest request)

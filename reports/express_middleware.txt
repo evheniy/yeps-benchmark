@@ -1,8 +1,8 @@
 node --version
-v8.9.0
+v10.5.0
 MW=10 PORT=3000 node express/index.js
 ab -c 100 -n 10000 http://localhost:3000/
-Master 1547 is running
+Master 3462 is running
   10 middleware
   10 middleware
   10 middleware
@@ -11,7 +11,7 @@ Master 1547 is running
   10 middleware
   10 middleware
   10 middleware
-This is ApacheBench, Version 2.3 <$Revision: 1796539 $>
+This is ApacheBench, Version 2.3 <$Revision: 1826891 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
@@ -26,30 +26,30 @@ Document Path:          /
 Document Length:        11 bytes
 
 Concurrency Level:      100
-Time taken for tests:   11.275 seconds
+Time taken for tests:   30.186 seconds
 Complete requests:      10000
 Failed requests:        0
 Total transferred:      1350000 bytes
 HTML transferred:       110000 bytes
-Requests per second:    886.95 [#/sec] (mean)
-Time per request:       112.745 [ms] (mean)
-Time per request:       1.127 [ms] (mean, across all concurrent requests)
-Transfer rate:          116.93 [Kbytes/sec] received
+Requests per second:    331.28 [#/sec] (mean)
+Time per request:       301.864 [ms] (mean)
+Time per request:       3.019 [ms] (mean, across all concurrent requests)
+Transfer rate:          43.67 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    1   2.2      1      28
-Processing:   100  111  51.9    105     659
-Waiting:      100  110  51.6    104     659
-Total:        100  112  52.1    105     660
+Connect:        0  186 1855.8      1   19553
+Processing:   100  113  38.9    105     478
+Waiting:       99  112  38.4    105     478
+Total:        100  299 1856.0    106   19665
 
 Percentage of the requests served within a certain time (ms)
-  50%    105
-  66%    106
-  75%    107
-  80%    108
-  90%    112
-  95%    121
-  98%    138
-  99%    568
- 100%    660 (longest request)
+  50%    106
+  66%    108
+  75%    110
+  80%    112
+  90%    122
+  95%    161
+  98%    391
+  99%  11273
+ 100%  19665 (longest request)

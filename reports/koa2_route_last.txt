@@ -1,9 +1,9 @@
 node --version
-v8.9.0
+v10.5.0
 R=10 PORT=3000 node koa2/router.js
 ab -c 100 -n 10000 http://localhost:3000/10
-Master 1985 is running
-This is ApacheBench, Version 2.3 <$Revision: 1796539 $>
+Master 3540 is running
+This is ApacheBench, Version 2.3 <$Revision: 1826891 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
@@ -18,30 +18,30 @@ Document Path:          /10
 Document Length:        2 bytes
 
 Concurrency Level:      100
-Time taken for tests:   7.027 seconds
+Time taken for tests:   27.092 seconds
 Complete requests:      10000
 Failed requests:        0
 Total transferred:      1370000 bytes
 HTML transferred:       20000 bytes
-Requests per second:    1423.10 [#/sec] (mean)
-Time per request:       70.269 [ms] (mean)
-Time per request:       0.703 [ms] (mean, across all concurrent requests)
-Transfer rate:          190.40 [Kbytes/sec] received
+Requests per second:    369.11 [#/sec] (mean)
+Time per request:       270.921 [ms] (mean)
+Time per request:       2.709 [ms] (mean, across all concurrent requests)
+Transfer rate:          49.38 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0   50 418.9      8    4240
-Processing:    10   20  17.7     19     229
-Waiting:       10   20  17.5     19     228
-Total:         10   70 418.9     27    4254
+Connect:        0  243 1950.7     10   19186
+Processing:    10   23  10.2     22     124
+Waiting:       10   21   8.1     21      98
+Total:         10  266 1950.2     33   19214
 
 Percentage of the requests served within a certain time (ms)
-  50%     27
-  66%     29
-  75%     30
-  80%     30
-  90%     34
-  95%     45
-  98%    230
-  99%   4162
- 100%   4254 (longest request)
+  50%     33
+  66%     35
+  75%     37
+  80%     38
+  90%     43
+  95%     54
+  98%    125
+  99%  19172
+ 100%  19214 (longest request)
